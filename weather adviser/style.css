@@ -59,14 +59,20 @@ input[type="text"] {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
     font-size: 1.3rem;
+    width: 100%;
+    border-radius: 30px;
+}
+
+#btn:hover {
+    background-color: #4caf4fdb;
 }
 
 .checkbox-group {
     display: flex;
     border: 1px solid gray;
-    width: 80%;
+    width: 100%;
+    margin: auto;
 }
 
 .checkbox-group p {
@@ -91,4 +97,5 @@ input[type="checkbox"] {
 .advice {
     margin: 10px;
     font-size: 1.3rem;
+    text-align: center;
 }

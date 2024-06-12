@@ -17,13 +17,13 @@ function adviseClothing() {
 
     // Determine clothing advice based on temperature
     if (temperature >= 85) {
-        result.innerHTML = "Wear shorts and a t-shirt";
+        result.innerHTML = "Wear shorts and a t-shirt.";
     } else if (temperature >= 70) {
-        result.innerHTML = "Wear jeans and a long-sleeve shirt";
+        result.innerHTML = "Wear jeans and a long-sleeve shirt.";
     } else if (temperature >= 55) {
-        result.innerHTML = "Wear a light jacket";
+        result.innerHTML = "Wear a light jacket.";
     } else {
-        result.innerHTML = "Wear a heavy coat";
+        result.innerHTML = "Wear a heavy coat.";
     }
 
     // Check if "yes" checkbox is checked
@@ -36,4 +36,4 @@ function adviseClothing() {
     if (isRaining) {
         result.innerHTML = "Bring an umbrella and a rain coat";
     };
-}
+};
