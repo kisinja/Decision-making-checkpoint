@@ -6,8 +6,16 @@
 }
 
 body {
-    background-color: #f1f1f1;
+    background: url(assets/jonathan-bowers-BqKdvJ8a5TI-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -17,24 +25,31 @@ div {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: white;
+    backdrop-filter: blur(10px);
     padding: 20px;
     border-radius: 10px;
+    width: 550px;
 }
 
 input[type="number"],
 input[type="text"] {
     padding: 10px;
     margin: 5px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid #4CAF50;
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+::placeholder {
+    color: rgb(202, 202, 202);
 }
 
 #results {
-    color: red;
-    font-size: 15px;
-    font-weight: 700;
-    margin: 10px;
+    color: greenyellow;
+    font-size: 1.3rem;
 }
 
 #btn {
@@ -45,4 +60,35 @@ input[type="text"] {
     border: none;
     cursor: pointer;
     width: 100%;
+    font-size: 1.3rem;
+}
+
+.checkbox-group {
+    display: flex;
+    border: 1px solid gray;
+    width: 80%;
+}
+
+.checkbox-group p {
+    color: white;
+}
+
+.checkbox-option {
+    display: flex;
+    position: relative;
+}
+
+.checkbox-option label {
+    color: white;
+    font-size: 20px;
+}
+
+input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+}
+
+.advice {
+    margin: 10px;
+    font-size: 1.3rem;
 }

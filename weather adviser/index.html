@@ -10,11 +10,26 @@
 
 <body>
 
-    <div>
-        <input type="number" placeholder="Enter the current temperature in Celsius:" id="temp"><br>
-        <input type="text" placeholder="Is it raining? (yes/no)" id="isRaining">
+    <center>
+        <h1 style="color: white;">Weather Adviser</h1>
+    </center>
 
-        <p id="results"></p>
+    <div>
+        <input type="number" placeholder="Temperature in &deg;C" id="temp"><br>
+
+        <div class="checkbox-group">
+            <p>Is it Raining?</p>
+            <div class="checkbox-option">
+                <input type="checkbox" id="yes" name="raining">
+                <label for="yes">Yes</label>
+            </div>
+            <div class="checkbox-option">
+                <input type="checkbox" id="no" name="raining">
+                <label for="no">No</label>
+            </div>
+        </div>
+
+        <p style="color: red;" class="advice">Advice: <span id="results"></span></p>
 
         <button type="submit" id="btn" onclick="adviseClothing()">Ask for advice</button>
     </div>

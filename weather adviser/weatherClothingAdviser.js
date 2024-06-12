@@ -1,46 +1,39 @@
+
 // Function to advise clothing based on temperature and rain
-function adviseClothing(temperature, isRaining) {
-    let clothingAdvice = "";
+function adviseClothing() {
+    const temp = document.getElementById("temp").value;
+    /* const isRaining = document.getElementById("rain").value; */
+    const result = document.getElementById("results");
+
+    if (!isNaN(parseFloat(temp)) && isFinite(temp)) {
+        temperature = parseInt(temp);
+    } else {
+        // Handle invalid input
+        alert("Invalid temperature input.");
+        return null;
+    }
+
+    console.log(temperature);
 
     // Determine clothing advice based on temperature
-    if (temperature >= 25) {
-        clothingAdvice = "Wear light clothes.";
-    } else if (temperature >= 15) {
-        clothingAdvice = "Wear a t-shirt and jeans.";
-    } else if (temperature >= 5) {
-        clothingAdvice = "Wear a sweater or jacket.";
+    if (temperature >= 85) {
+        result.innerHTML = "Wear shorts and a t-shirt";
+    } else if (temperature >= 70) {
+        result.innerHTML = "Wear jeans and a long-sleeve shirt";
+    } else if (temperature >= 55) {
+        result.innerHTML = "Wear a light jacket";
     } else {
-        clothingAdvice = "Wear a heavy jacket or coat.";
+        result.innerHTML = "Wear a heavy coat";
     }
 
-    // Add advice based on rain
+    // Check if "yes" checkbox is checked
+    const isRainingYes = document.getElementById("yes").checked;
+    // Check if "no" checkbox is checked
+    const isRainingNo = document.getElementById("no").checked;
+
+    const isRaining = isRainingYes || (!isRainingYes && !isRainingNo);
+
     if (isRaining) {
-        clothingAdvice += " Bring an umbrella or raincoat.";
-    }
-
-    return clothingAdvice;
+        result.innerHTML = "Bring an umbrella and a rain coat";
+    };
 }
-
-// Function to get user input
-function getUserInput() {
-    const temperature = parseFloat(prompt("Enter the current temperature in Celsius:"));
-    const isRainingStr = prompt("Is it raining? (yes/no)").toLowerCase();
-    const isRaining = isRainingStr === "yes";
-
-    return { temperature, isRaining };
-}
-
-// Main function
-function main() {
-    // Get user input
-    const { temperature, isRaining } = getUserInput();
-
-    // Advise clothing based on temperature and rain
-    const clothingAdvice = adviseClothing(temperature, isRaining);
-
-    // Display advice to the user
-    console.log("Clothing Advice:", clothingAdvice);
-}
-
-// Run the program
-main();
