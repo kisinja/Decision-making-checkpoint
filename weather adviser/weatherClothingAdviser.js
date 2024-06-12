@@ -9,19 +9,27 @@ function adviseClothing() {
         temperature = parseInt(temp);
     } else {
         // Handle invalid input
-        alert("Invalid temperature input.");
+        alert("Please enter a valid temperature");
         return null;
+    }
+
+    const addDot = (advice) => {
+        return `${advice}.`;
     }
 
     // Determine clothing advice based on temperature
     if (temperature >= 85) {
-        result.innerHTML = "Wear shorts and a t-shirt.";
+        result.innerHTML = addDot("Wear shorts and a t-shirt");
     } else if (temperature >= 70) {
-        result.innerHTML = "Wear jeans and a long-sleeve shirt.";
+        result.innerHTML = addDot("Wear jeans and a long-sleeve shirt");
     } else if (temperature >= 55) {
-        result.innerHTML = "Wear a light jacket.";
-    } else {
-        result.innerHTML = "Wear a heavy coat.";
+        result.innerHTML = addDot("Wear a light jacket");
+    } else if (temperature === "" || temperature === null || temperature === undefined) {
+        result.setAttribute("style", "color: red;");
+        result.innerHTML = addDot("Please enter a temperature");
+    }
+    else {
+        result.innerHTML = addDot("Wear a heavy jacket");
     }
 
     // Check if "yes" checkbox is checked
