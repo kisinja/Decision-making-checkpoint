@@ -75,7 +75,7 @@ label {
 }
 
 #btn {
-    background-color: #481b1e;
+    background-color: #634b3f;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -84,6 +84,12 @@ label {
     width: 100%;
     border-radius: 10px;
     font-size: 1.3rem;
+
+    transition: background-color .3s ease-in-out;
+}
+
+#btn:hover {
+    background-color: #481b1e;
 }
 
 .input-c {
