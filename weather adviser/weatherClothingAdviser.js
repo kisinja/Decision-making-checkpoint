@@ -13,8 +13,6 @@ function adviseClothing() {
         return null;
     }
 
-    console.log(temperature);
-
     // Determine clothing advice based on temperature
     if (temperature >= 85) {
         result.innerHTML = "Wear shorts and a t-shirt.";
