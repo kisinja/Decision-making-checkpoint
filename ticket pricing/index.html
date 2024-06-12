@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Pricing App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <center>
+        <h1>Ticket Master</h1>
+    </center>
+
+    <div class="container">
+        <div class="input-c">
+            <label>Age:</label>
+            <input type="number" placeholder="Enter your age" id="age">
+        </div>
+
+        <div class="reason">
+            <p id="reason-result"></p>
+        </div>
+
+        <p class="price">Ticket Price: <span id="price-result"></span></p>
+
+        <button type="submit" id="btn" onclick="checkPrice()">Get ticket price</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
